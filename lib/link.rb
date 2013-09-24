@@ -5,7 +5,7 @@ class Link
   # this makes the instances of this class Datamapper resources
   include DataMapper::Resource
 
-  has n, :tags
+  has n, :tags, :through => Resource
 
   # This block describes what resources our model will have
   # it's a good idea to have a unique id field to differentiate between
