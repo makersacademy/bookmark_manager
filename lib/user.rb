@@ -5,7 +5,7 @@ class User
   include DataMapper::Resource
 
   property :id, Serial
-  property :email, String
+  property :email, String, :unique => true, :message => "This email is already taken"
   # this will store both the password and the salt
   # It's Text and not String because String holds 50 characters by default
   # and it's not enough for the hash and salt
@@ -19,7 +19,7 @@ class User
   # and password_confirmation are the same
   # read more about it in the documentation
   # http://datamapper.org/docs/validations.html
-  validates_confirmation_of :password
+  validates_confirmation_of :password, :message => "Sorry, your passwords don't match"
 
   # when assigned the password, we don't store it directly
   # instead, we generate a password digest, that looks like this:
