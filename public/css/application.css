@@ -79,6 +79,30 @@ header {
   }
 
   .link .source {
-    float: right;
+    /* http://learnlayout.com/float.html and the next 4 sections */
+    float: right; 
     font-size: 12px;
+  }
+
+footer {
+  display: flex;
+  background-color: rgba(0,0,0,0.2);
+}
+
+  footer > * {
+    margin: auto inherit;
+  }
+
+  footer img {
+    /* http://stackoverflow.com/questions/10658475/3px-extra-height-on-a-div-with-an-image-inside-it */
+    vertical-align: top;
+  }
+
+  footer #technologies {
+    -webkit-flex: 1;
+    flex: 1;
+  }
+
+  footer p {
+    padding: 5px 25px;
   }
