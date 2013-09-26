@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Helvetica, Arial, Sans-serif;
   background-image: url(/images/extra_clean_paper.png);
@@ -10,9 +14,11 @@ a {
   color: #b77843;
 }
 
-a.button {
+.button {
   display: inline-block; /* display inline but have dimensions */
-  width: 80px;
+  width: 110px;
+  cursor: pointer;
+  font-size: 16px;
   background-color: #82B743;
   border: 2px solid white;
   color: white; /*text colour*/
@@ -25,7 +31,7 @@ a.button {
 }
 
 /* a link that has both classes. Overrides the previous declaration */
-a.button.highlighted {
+.button.highlighted {
   background-color: #b77843;
 }
 
@@ -54,6 +60,14 @@ header {
     flex: 1; /* http://learnlayout.com/flexbox.html */
     -webkit-flex: 1;
     text-align: right;  
+  }
+
+  header #user-links > * {
+    display: inline-block;
+  }
+
+  header #user-links #welcome-message {
+    font-size: 14px;
   }
 
 #links-container {
