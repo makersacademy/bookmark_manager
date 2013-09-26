@@ -1,6 +1,9 @@
 <header>
-  <div id="logo">Bookmark Manager</div>
-  <div id="user-links">
+  <div id="logo">
+    <a href="/">Bookmark Manager</a>
+  </div>
+  <a href="/links/new" class="button highlighted">Add link</a>
+  <div id="user-links">    
     <% if current_user %>
       <span id="welcome-message">
         Welcome, <%= current_user.email %>  
