@@ -1,7 +1,5 @@
-<div id='links-container'>
-  <ul id='links'>
-    <% @links.each do |link| %>
-      <%= partial :link, :locals => {:link => link}  %>
-    <% end %>
-  </ul>  
-</div>
+<ul id='links'>
+  <% @links.each do |link| %>
+    <%= partial :link, :locals => {:link => link}  %>
+  <% end %>
+</ul>  
