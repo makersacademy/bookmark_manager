@@ -8,6 +8,17 @@ body {
   color: #333;  
 }
 
+html, body {
+  height: 100%;
+}
+/* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -70px;
+}
+
 /* no links should be underlined */
 a {
   text-decoration: none;
@@ -136,6 +147,7 @@ form {
 footer {
   display: flex;
   background-color: rgba(0,0,0,0.2);
+  height: 70px; /* because of the sticky footer */
 }
 
   footer > * {
@@ -150,8 +162,15 @@ footer {
   footer #technologies {
     -webkit-flex: 1;
     flex: 1;
+    font-size: 12px;
   }
 
   footer p {
     padding: 5px 25px;
   }
+
+  /* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+  .footer, .push {
+    height: 70px;
+  }
+
