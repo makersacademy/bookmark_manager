@@ -93,6 +93,7 @@ header {
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   margin: 10px inherit;
   padding: 15px 10px;
+  display: none;
 }
 
   .link a.title {

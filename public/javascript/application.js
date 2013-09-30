@@ -1,3 +1,7 @@
+function animateLinks() {
+  $('.link').show(1000);
+}
+
 $(function() {
-  console.log($("*").length);
+  animateLinks();
 })
