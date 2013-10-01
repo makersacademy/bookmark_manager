@@ -1,7 +1,9 @@
-function animateLinks() {
-  $('.link').show(1000);
+function addFavouritesHandler() {
+  $(".star.solid").click(function(event) {
+    $(this).animate({opacity: 1}, 1000);
+  });
 }
 
 $(function() {
-  animateLinks();
+  addFavouritesHandler();
 })

@@ -92,9 +92,21 @@ header {
   background-color: #EEE;
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
   margin: 10px inherit;
-  padding: 15px 10px;
-  display: none;
+  padding: 15px 10px;  
+  position: relative; /* necessary for absolute positioning of the stars */
 }
+  .link .star {
+    position: absolute; /* absolute, relative to the first parent that's relative */
+    font-size: 24px;
+    right: 5px;
+    top: 5px;
+    color: yellowgreen;
+    cursor: pointer;
+  }
+
+  .link .star.solid {
+    opacity: 0;
+  }
 
   .link a.title {
     letter-spacing: 1px;    
