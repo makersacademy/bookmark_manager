@@ -30,13 +30,26 @@ function addFavouritesHandler() {
   });
 }
 
-function prepareNewLinkHandler() {
+function prepareFormHandler() {
+  var form = $('#container #ajax-form form');
+  form.submit(function(event) {    
+    var addLink = function(data) {
+      $('#links').prepend(data);
+    }
+    var data = form.serialize();
+    $.post(form.attr('action'), data, addLink);
+    event.preventDefault();
+  })
+}
+
+function prepareRemoteFormsHandler() {
   $('.add-link, .new-user, .new-session').click(function(event) {
     $.get($(this).attr("href"), function(data) {
       if ($('#container #ajax-form').length == 0) {
         $("#container").prepend("<div id='ajax-form'></div>");
       }
       $('#container #ajax-form').html(data);
+      prepareFormHandler();
     });
     /* prevents the browser from sending a GET request */
     event.preventDefault();
@@ -45,5 +58,5 @@ function prepareNewLinkHandler() {
 
 $(function() {
   addFavouritesHandler();
-  prepareNewLinkHandler();
+  prepareRemoteFormsHandler();
 })
