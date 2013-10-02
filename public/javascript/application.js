@@ -30,6 +30,20 @@ function addFavouritesHandler() {
   });
 }
 
+function prepareNewLinkHandler() {
+  $('.add-link, .new-user, .new-session').click(function(event) {
+    $.get($(this).attr("href"), function(data) {
+      if ($('#container #ajax-form').length == 0) {
+        $("#container").prepend("<div id='ajax-form'></div>");
+      }
+      $('#container #ajax-form').html(data);
+    });
+    /* prevents the browser from sending a GET request */
+    event.preventDefault();
+  });
+}
+
 $(function() {
   addFavouritesHandler();
+  prepareNewLinkHandler();
 })

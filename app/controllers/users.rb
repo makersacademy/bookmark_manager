@@ -4,7 +4,7 @@ get '/users/new' do
   # ruby would divide the symbol :users by the
   # variable new (which makes no sense)
   @user = User.new
-  erb :"users/new"
+  erb :"users/new", :layout => !request.xhr?
 end
 
 post '/users' do
