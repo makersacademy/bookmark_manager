@@ -181,7 +181,7 @@ footer {
   }
 
   /* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
-  footer, .footer, .push {
+  footer, .push {
     height: 70px;
   }
 

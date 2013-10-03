@@ -60,7 +60,7 @@
 }
 
 @media(max-width: 320px) {
-  footer, .footer, .push {
+  footer, .push {
     height: 130px;
   }
 
