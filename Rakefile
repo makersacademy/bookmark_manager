@@ -20,3 +20,7 @@ task :auto_migrate do
 end
 # Finally, don't forget that before you do any of that stuff, 
 # you need to create a database first.
+
+task :test do
+  system "rspec 2>/dev/null"
+end

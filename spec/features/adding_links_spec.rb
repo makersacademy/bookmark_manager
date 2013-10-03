@@ -20,6 +20,14 @@ feature "User adds a new link" do
     expect(link.tags.map(&:text)).to include("ruby")
   end
 
+  scenario "from the homepage using an ajax form", :js => true do
+    visit '/'
+    click_link "Add link"
+    add_link("http://www.example.com/", "Example")
+    expect(page).to have_content('Example')
+    expect(current_path).to eq('/')
+  end
+
   def add_link(url, title, tags = [])    
     fill_in 'url', :with => url
     fill_in 'title', :with => title
