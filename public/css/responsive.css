@@ -1,4 +1,4 @@
-@media(max-width: 320px) {
+@media(max-width: 480px) {
   body {
     font-size: 12px;    
   }
@@ -46,7 +46,21 @@
       font-size: 10px;
     }
 
-  .footer, .push {
+  footer {
+    padding: 0 10px;
+  }
+
+    footer p {
+      padding: 5px;
+    }
+
+    footer #makersacademy-logo img {
+      width: 150px;
+    } 
+}
+
+@media(max-width: 320px) {
+  footer, .footer, .push {
     height: 130px;
   }
 
@@ -59,11 +73,8 @@
     text-align: center;
   }
 
-    footer p {
-      padding: 5px;
-    }
-
     footer #makersacademy-logo img {
       width: 100%;
     }
+
 }
