@@ -6,11 +6,13 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'database_cleaner'
-require_relative 'web_helper'
+require_relative 'helpers/sessions'
 
 Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
+
+  config.include SessionHelpers
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
